@@ -7,10 +7,10 @@ describe Fraccion do
 
   describe "# almacenamiento numerador y denominador" do
     it "Debe existir un numerador" do
-      @f1.num.should eq(2)
+      @f1.num.should eq(2) #accede a num(), igual a se debe invocar al metodo num() para obtener el numerador
     end
     it "Debe existir un denominador" do
-      @f1.den.should eq(4)
+      @f1.den.should eq(4) #accede a den (),igual a se debe invocar al metodo denom() para obtener el denominador
     end
   end
   
@@ -19,6 +19,15 @@ describe Fraccion do
       f2 = @f1.reduccion
       f2.num.should eq(1)
       f2.den.should eq(2)
+    end
+  end
+  
+  describre "# mostrar" do
+    it "Se debe mostar por la consola la fraccion de la forma: a/b, donde a es el numerador y b el denominador" do
+      @f1.to_s.should eq("2/4")
+    end
+    it "Se debe mostar por la consola la fraccion en formato flotante" do
+      @f1.to_f.should eq(0.5)
     end
   end
   
