@@ -14,4 +14,12 @@ class Fraccion
     fracc2
   end
   
+  def to_s
+    "#{@num}/#{@den}"
+  end
+  
+  def to_f
+    (@num/@den.to_f)
+  end
+  
 end
