@@ -55,4 +55,12 @@ describe Fraccion do
     end
   end
   
+  describe "# Menos Unario" do
+    it "Se debe calcular el opuesto de una fraccion con -" do
+      f2 = -@f1
+      f2.num.should eq(-2)
+      f2.den.should eq(4)
+    end
+  end
+  
 end
