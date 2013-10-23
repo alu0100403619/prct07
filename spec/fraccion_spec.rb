@@ -34,7 +34,16 @@ describe Fraccion do
   describe "# Comparacion de fracciones" do
     it "Se debe comparar si dos fracciones son iguales con ==" do
       f2 = Fraccion.new(1, 2)
-      (@f1 == f2).should eq (true)
+      (@f1 == f2).should eq(true)
+    end
+  end
+  
+  describe "# Absoluto" do
+    it "Se debe calcular el valor absoluto de una fraccion con el metodo abs" do
+      f2 = Fraccion.new(-1, 2)
+      f2 = f2.abs
+      f2.num.should eq(1)
+      f2.den.should eq(2)
     end
   end
   

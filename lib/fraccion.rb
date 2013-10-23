@@ -22,4 +22,14 @@ class Fraccion
     (@num/@den.to_f)
   end
   
+  def ==(other)
+    f1 = reduccion
+    f2 = other.reduccion
+    if ((f1.num == other.num) && (f1.den == other.den))
+      true
+    else
+      false
+    end
+  end
+  
 end
