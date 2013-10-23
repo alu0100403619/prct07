@@ -50,8 +50,8 @@ describe Fraccion do
   describe "# Reciproco" do
     it "Se debe calcular el reciproco de una fraccion con el metodo reciprocal" do
       f2 = @f1.reciprocal
-      f2.num.should eq(2)
-      f2.den.should eq(1)
+      f2.num.should eq(4)
+      f2.den.should eq(2)
     end
   end
   

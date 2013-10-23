@@ -39,4 +39,9 @@ class Fraccion
     fracc
   end
   
+  def reciprocal
+    fracc2 = Fraccion.new(@den, @num)
+    fracc2
+  end
+  
 end

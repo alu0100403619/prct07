@@ -35,8 +35,13 @@ class Fraccion
   def abs
     n = @num.abs
     d = @den.abs
-    fracc = Fraccion.new(m, d)
+    fracc = Fraccion.new(n, d)
     fracc
+  end
+  
+  def reciprocal
+    fracc2 = Fraccion.new(@den, @num)
+    fracc2
   end
   
 end
