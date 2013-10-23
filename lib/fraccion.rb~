@@ -1,4 +1,4 @@
-require "./gcd.rb"
+require "gcd.rb"
 
 class Fraccion
   
@@ -6,6 +6,12 @@ class Fraccion
   
   def initialize (num, den)
     @num, @den = num, den
+  end
+  
+  def reduccion (fracc)
+    divisor = gcd(fracc.num, fracc.den)
+    fracc2 = Fraccion.new(fracc.num/divisor, fracc.den/divisor)
+    fracc2
   end
   
 end
