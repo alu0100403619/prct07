@@ -32,4 +32,11 @@ class Fraccion
     end
   end
   
+  def abs
+    n = @num.abs
+    d = @den.abs
+    fracc = Fraccion.new(m, d)
+    fracc
+  end
+  
 end
