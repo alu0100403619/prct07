@@ -1,2 +1,5 @@
 class Fraccion
+  
+  
+  
 end
