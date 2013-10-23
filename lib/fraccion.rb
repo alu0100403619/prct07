@@ -44,4 +44,9 @@ class Fraccion
     fracc2
   end
   
+  def -@
+    fracc2 = Fraccion.new(-@num, @den)
+    fracc2
+  end
+  
 end
