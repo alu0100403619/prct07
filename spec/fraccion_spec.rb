@@ -63,4 +63,34 @@ describe Fraccion do
     end
   end
   
+  describe "# Operaciones" do
+    it " Se debe sumar dos fracciones con + y dar el resultado de forma reducida" do
+      f2 = Fraccion.new(6, 8)
+      f2 = @f1 + f2
+      f2.num.should eq(5)
+      f2.den.should eq(4)
+    end
+    it "Se debe restar dos fracciones con - y dar el resultado de forma reducida" do
+      f2 = Fraccion.new(6, 8)
+      f2 = f2 - @f1
+      f2.num.should eq(1)
+      f2.den.should eq(4)
+    end
+    it "Se debe multiplicar dos fracciones con * y dar el resultado de forma reducid" do
+      f2 = Fraccion.new(3, 4)
+      f2 = @f1 * f2
+      f2.num.should eq(3)
+      f2.den.should eq(8)
+    end
+    it "Se debe dividir dos fracciones con / y dar el resultado de forma reducida" do
+      f2 = Fraccion.new(3, 4)
+      f2 = @f1 * f2
+      f2.num.should eq(2)
+      f2.den.should eq(3)
+    end
+    it "Se debe calcular el resto dos fracciones con % y dar el resultado de forma reduc" do
+      
+    end
+  end
+  
 end
