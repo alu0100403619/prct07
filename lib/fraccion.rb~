@@ -1,2 +1,9 @@
 class Fraccion
+  
+  attr_reader :num, :den
+  
+  def initalize (num, den)
+    @num, @den = num, den
+  end
+  
 end
