@@ -1,3 +1,5 @@
+#require "./gcd.rb"
+
 class Fraccion
   
   attr_reader :num, :den

@@ -14,4 +14,12 @@ describe Fraccion do
     end
   end
   
+  describe "# forma reducida" do
+    it "Debe estar en su forma reducida" do
+      f2 = @f1.reduccion
+      f2.num.should eq(1)
+      f2.den.should eq(2)
+    end
+  end
+  
 end
