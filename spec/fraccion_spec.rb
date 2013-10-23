@@ -1,4 +1,4 @@
-require "lib/fracciones.rb"
+require "lib/fraccion.rb"
 
 describe Fraccion do
   before :each do
