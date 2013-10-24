@@ -93,6 +93,24 @@ describe Fraccion do
     end
   end
   
-
+  describe "# Comparaciones" do
+    it "Una fraccion menor que otra" do
+      f2 = Fraccion.new(3, 2) # = 1.5
+      #@f1 = (2/4) = 0.5
+      (@f1 < f2).should eq(true)
+    end
+    it "Una fraccion mayor que otra" do
+      f2 = Fraccion.new(3, 2)
+      (f2 > @f1).should eq(true)
+    end
+    it "Una fraccion menor igual que otra" do
+      f2 = Fraccion.new(3, 2) #@f1 = (2/4)
+      (@f1 <= f2).should eq(true)
+    end
+    it "Una fraccion mayor igual que otra" do
+      f2 = Fraccion.new(3, 2) #@f1 = (2/4)
+      (f2 >= @f1).should eq(true)
+    end
+  end
   
 end
