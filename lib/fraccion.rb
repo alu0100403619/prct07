@@ -1,7 +1,9 @@
 require "gcd.rb"
+require "Comparable"
 
 class Fraccion
   
+  include Comparable
   attr_reader :num, :den
   
   def initialize (num, den)
@@ -78,6 +80,10 @@ class Fraccion
     den = @den * other.num
     mcd = gcd(num, den)
     div = Fraccion.new(num/mcd, den/mcd)
+  end
+  
+  def <=>(other)
+    (@num/@den) <=> (other.num/other.den)
   end
   
 end
