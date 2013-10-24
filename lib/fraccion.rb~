@@ -82,5 +82,8 @@ class Fraccion
     div = Fraccion.new(num/mcd, den/mcd)
   end
   
-
+  def <=>(other)
+    (@num/@den) <=> (other.num/other.den)
+  end
+  
 end

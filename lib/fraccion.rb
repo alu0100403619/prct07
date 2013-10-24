@@ -1,5 +1,5 @@
 require "gcd.rb"
-require "Comparable"
+require 'Comparable'
 
 class Fraccion
   
