@@ -49,4 +49,35 @@ class Fraccion
     fracc2
   end
   
+  def +(other)
+    den = @den * other.den
+    num = ((den/@den)*@num) + ((den/other.den)*other.nun)
+    mcd = gcd(num, den)
+    sum = Fraccion.new(num/mcd, den/mcd)
+    sum
+  end
+  
+  def -(other)
+    den = @den * other.den
+    num = ((den/@den)*@num) - ((den/other.den)*other.nun)
+    mcd = gcd(num, den)
+    res = Fraccion.new(num/mcd, den/mcd)
+    res
+  end
+    
+  def *(other)
+    num = @num * other.num
+    den = @den * other.den
+    mcd = gcd(num, den)
+    mult = Fraccion.new(num/mcd, den/mcd)
+    mult
+  end
+
+  def div(other)
+    num = @num * other.den
+    den = @den * other.num
+    mcd = gcd(num, den)
+    div = Fraccion.new(num/mcd, den/mcd)
+  end
+  
 end
