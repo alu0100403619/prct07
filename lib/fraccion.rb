@@ -1,5 +1,5 @@
 require "gcd.rb"
-require 'Comparable'
+#require "Comparable.rb"
 
 class Fraccion
   
@@ -53,7 +53,7 @@ class Fraccion
   
   def +(other)
     den = @den * other.den
-    num = ((den/@den)*@num) + ((den/other.den)*other.nun)
+    num = ((den/@den)*@num) + ((den/other.den)*other.num)
     mcd = gcd(num, den)
     sum = Fraccion.new(num/mcd, den/mcd)
     sum
@@ -61,7 +61,7 @@ class Fraccion
   
   def -(other)
     den = @den * other.den
-    num = ((den/@den)*@num) - ((den/other.den)*other.nun)
+    num = ((den/@den)*@num) - ((den/other.den)*other.num)
     mcd = gcd(num, den)
     res = Fraccion.new(num/mcd, den/mcd)
     res
