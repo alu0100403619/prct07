@@ -34,7 +34,7 @@ class Fraccion
     end
   end
   
-  def abs
+  def abs # || ???
     n = @num.abs
     d = @den.abs
     fracc = Fraccion.new(n, d)
@@ -75,11 +75,16 @@ class Fraccion
     mult
   end
 
-  def div(other)
+  def div(other) # def /(other) Funciona
     num = @num * other.den
     den = @den * other.num
     mcd = gcd(num, den)
     div = Fraccion.new(num/mcd, den/mcd)
+  end
+  
+  def % (other)
+    f2 = Fraccion.new(0, 1)
+    f2
   end
   
   def <=>(other)

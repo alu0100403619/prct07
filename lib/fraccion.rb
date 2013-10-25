@@ -75,7 +75,7 @@ class Fraccion
     mult
   end
 
-  def div(other)
+  def div(other) # def /(other) Funciona
     num = @num * other.den
     den = @den * other.num
     mcd = gcd(num, den)
