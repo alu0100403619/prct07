@@ -115,4 +115,19 @@ describe Fraccion do
     end
   end
   
+  describe "# Operaciones Conjuntas" do
+    it "Se debe poder comprobar operaciones conjuntas" do
+      f2 = Fraccion.new(3, 2) #@f1 = (2/4)
+      NEUTRO = Fraccion.new(0, 1)
+      #if ((@f1%f2).to_f == 0) FUNCIONA
+      if ((@f1%f2) == NEUTRO) #FUNCIONA
+	resultado = ((-@f1) * f2).abs #-2/4 * 3/2 = -6/8 = -3/4  => |-3/4| = 3/4
+      else
+	 resultado = NEUTRO
+      end
+      #resultado.to_s.should eq("0/1") => DEBE FALLAR y FALLA
+      resultado.to_s.should eq("3/4")
+    end
+  end
+  
 end
