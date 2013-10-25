@@ -89,7 +89,9 @@ describe Fraccion do
       f2.den.should eq(3)
     end
     it "Se debe calcular el resto dos fracciones con % y dar el resultado de forma reduc" do
-      
+      f2 = Fraccion.new(3, 4)
+      f2 = @f1%f2
+      f2.to_s.should eq("0/1")
     end
   end
   
