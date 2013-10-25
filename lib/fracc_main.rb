@@ -2,7 +2,7 @@ require "fraccion.rb"
 
 puts "Programa Principal"
 f1 = Fraccion.new(2,4)
-f2 = Fraccion.new(-3,5)
+f2 = Fraccion.new(-3,2)
 
 red = f1.reduccion
 fl = f1.to_f
@@ -28,4 +28,4 @@ puts "division: #{div}"
 f1 > f2 ? (puts "true") : (puts "false")
 f1 < f2 ? (puts "true") : (puts "false")
 f1 >= f2 ? (puts "true") : (puts "false")
-f1 >= f2 ? (puts "true") : (puts "false")
+f1 <= f2 ? (puts "true") : (puts "false")
