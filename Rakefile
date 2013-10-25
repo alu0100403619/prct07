@@ -1,6 +1,6 @@
 task :default => :spec
 
-desc "Ejecutar las espectativas de la clase Point"
+desc "Ejecutar las espectativas de la clase Fraccion"
 task :spec do
   sh "rspec -I. spec/fraccion_spec.rb"
 end
@@ -12,7 +12,7 @@ end
 
 desc "Run /lib/frac_main.rb"
 task :bin do
-  sh "rspec -I. lib/frac_main.rb --format documentation"
+  sh "rspec -I. lib/fracc_main.rb"
 end
 
 desc "Run test with --format: documentation"
