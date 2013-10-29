@@ -84,7 +84,7 @@ describe Fraccion do
     end
     it "Se debe dividir dos fracciones con / y dar el resultado de forma reducida" do
       f2 = Fraccion.new(3, 4)
-      f2 = @f1.div(f2)
+      f2 = @f1/f2
       f2.num.should eq(2)
       f2.den.should eq(3)
     end
