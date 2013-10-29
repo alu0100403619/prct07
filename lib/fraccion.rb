@@ -90,6 +90,8 @@ class Fraccion
   end
   
   def <=>(other)
+    raise TypeError "other no es del tipo Fraccion"
+    unless other.instance_of?Fraccion
     (@num/@den) <=> (other.num/other.den)
   end
   
