@@ -125,7 +125,7 @@ describe Fraccion do
       else
 	 resultado = NEUTRO
       end
-      #resultado.to_s.should eq("0/1") => FALLA
+      #resultado.to_s.should eq("0/1") => DEBE FALLAR y FALLA
       resultado.to_s.should eq("3/4")
     end
   end

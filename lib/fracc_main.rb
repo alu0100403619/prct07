@@ -12,7 +12,7 @@ fm = -f2
 sum = f1 + f2
 rest = f1 - f2
 mult = f1 * f2
-div = f1.div(f2)
+div = f1 / f2
 
 puts "f1: #{f1}"
 puts "f2: #{f2}"

@@ -16,11 +16,11 @@ class Fraccion
     fracc2
   end
   
-  def to_s
+  def to_s #mostrar por pantalla
     "#{@num}/#{@den}"
   end
   
-  def to_f
+  def to_f #convertir a float
     (@num/@den.to_f)
   end
   
@@ -34,40 +34,40 @@ class Fraccion
     #end
   #end
   
-  def abs
+  def abs #valor absoluto
     n = @num.abs
     d = @den.abs
     fracc = Fraccion.new(n, d)
     fracc
   end
   
-  def reciprocal
+  def reciprocal #reciproco
     fracc2 = Fraccion.new(@den, @num)
     fracc2
   end
   
-  def -@
+  def -@ #opuesto
     fracc2 = Fraccion.new(-@num, @den)
     fracc2
   end
   
-  def +(other)
-    den = @den * other.den
-    num = ((den/@den)*@num) + ((den/other.den)*other.num)
-    mcd = gcd(num, den)
-    sum = Fraccion.new(num/mcd, den/mcd)
-    sum
-  end
-  
-  def -(other)
+  def -(other) #diferencia
     den = @den * other.den
     num = ((den/@den)*@num) - ((den/other.den)*other.num)
     mcd = gcd(num, den)
     res = Fraccion.new(num/mcd, den/mcd)
     res
   end
+  
+  def +(other) #suma
+    den = @den * other.den
+    num = ((den/@den)*@num) + ((den/other.den)*other.num)
+    mcd = gcd(num, den)
+    sum = Fraccion.new(num/mcd, den/mcd)
+    sum
+  end
     
-  def *(other)
+  def *(other) #producto
     num = @num * other.num
     den = @den * other.den
     mcd = gcd(num, den)
@@ -75,7 +75,7 @@ class Fraccion
     mult
   end
 
-  def div(other) # def /(other) Funciona
+  def /(other) #division
     num = @num * other.den
     den = @den * other.num
     mcd = gcd(num, den)
