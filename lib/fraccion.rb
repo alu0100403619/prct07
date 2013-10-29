@@ -24,17 +24,15 @@ class Fraccion
     (@num/@den.to_f)
   end
   
-  =begin
-  def ==(other)
-    f1 = reduccion
-    f2 = other.reduccion
-    if ((f1.num == other.num) && (f1.den == other.den))
-      true
-    else
-      false
-    end
-  end
-  =end
+  #def ==(other)
+    #f1 = reduccion
+    #f2 = other.reduccion
+    #if ((f1.num == other.num) && (f1.den == other.den))
+      #true
+    #else
+      #false
+    #end
+  #end
   
   def abs
     n = @num.abs
@@ -90,8 +88,8 @@ class Fraccion
   end
   
   def <=>(other)
-    raise TypeError "other no es del tipo Fraccion"
-    unless other.instance_of?Fraccion
+    raise TypeError "other no es del tipo Fraccion" unless other.instance_of? Fraccion
+    
     (@num/@den) <=> (other.num/other.den)
   end
   
