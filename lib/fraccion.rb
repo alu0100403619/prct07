@@ -24,6 +24,7 @@ class Fraccion
     (@num/@den.to_f)
   end
   
+  =begin
   def ==(other)
     f1 = reduccion
     f2 = other.reduccion
@@ -33,6 +34,7 @@ class Fraccion
       false
     end
   end
+  =end
   
   def abs
     n = @num.abs
