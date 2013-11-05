@@ -1,4 +1,4 @@
-require "fraccion.rb"
+require 'fraccion.rb'
 
 puts "Programa Principal"
 f1 = Fraccion.new(2,4)
